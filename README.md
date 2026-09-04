@@ -1,16 +1,70 @@
-# React + Vite
+# Synvora
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Synvora is a React website for a global textile sourcing and manufacturing network. It includes company information, services, product categories, industries, network coverage, leadership content, and a contact page.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite
+- React Router
+- Tailwind CSS
+- Oxlint
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Requirements
 
-## Expanding the Oxlint configuration
+- Node.js 18 or newer
+- npm
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Installation
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL shown by Vite in your browser.
+
+## Available Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server with hot reloading. |
+| `npm run build` | Create a production build in `dist/`. |
+| `npm run preview` | Preview the production build locally. |
+| `npm run lint` | Check the project with Oxlint. |
+
+## Routes
+
+- `/` - Home page
+- `/contact` - Contact page
+
+## Project Structure
+
+```text
+src/
+├── components/   Reusable page and UI components
+├── data/         Site content and configuration data
+├── hooks/        Custom React hooks
+├── pages/        Route-level pages
+└── utils/        Shared utilities and motion helpers
+public/
+└── fabrics/      Public image assets
+```
+
+## Production Build
+
+Build the site and preview it locally with:
+
+```bash
+npm run build
+npm run preview
+```
+
+Made with ❤️
