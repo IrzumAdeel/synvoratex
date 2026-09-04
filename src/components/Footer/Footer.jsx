@@ -37,7 +37,7 @@ export default function Footer() {
               <span className="font-display font-extrabold text-lg">Synvora<span className="text-accent">.</span></span>
             </div>
             <p className="text-white/50 leading-relaxed max-w-sm mb-6">Connecting international buyers with trusted manufacturing partners across Pakistan and China. Sourcing, quality assurance and export, managed end to end.</p>
-            <a href="#" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/ibrahim-adnan-b9607522/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent transition-colors" aria-label="LinkedIn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true">
                 <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.65 4.76 6.1V23h-4v-6.85c0-1.63-.03-3.73-2.27-3.73-2.28 0-2.63 1.78-2.63 3.62V23h-4V8z" />
               </svg>
@@ -66,11 +66,12 @@ export default function Footer() {
           <div>
             <div className="font-display font-bold mb-5 text-white/90 text-sm tracking-wide">GET IN TOUCH</div>
             <ul className="space-y-4 text-white/60 text-sm">
-              <li className="flex gap-3"><span className="text-accent">✉</span> hello@synvora.com</li>
-              <li className="flex gap-3"><span className="text-accent">☎</span> +92 300 000 0000</li>
+              <li className="flex gap-3"><span className="text-accent">✉</span> <a href="mailto:info@synvoratex.com" className="hover:text-white transition-colors">info@synvoratex.com</a></li>
+              <li className="flex gap-3"><span className="text-accent">☎</span> <a href="tel:+971503974628" className="hover:text-white transition-colors">+971 50 397 4628</a></li>
+              <li className="flex gap-3"><span className="text-accent">☎</span> <a href="tel:+923201487339" className="hover:text-white transition-colors">+92 320 148 7339</a></li>
               <li className="flex gap-3"><span className="text-accent">📍</span> 24C3, MM Alam Road, Gulberg III, Lahore</li>
             </ul>
-            <a ref={emailBtnRef} href="mailto:hello@synvora.com" className="inline-block mt-6 btn-primary magnetic text-white font-bold text-sm px-6 py-3 rounded-full">Email Us</a>
+            <a ref={emailBtnRef} href="mailto:info@synvoratex.com" className="inline-block mt-6 btn-primary magnetic text-white font-bold text-sm px-6 py-3 rounded-full">Email Us</a>
           </div>
         </div>
 

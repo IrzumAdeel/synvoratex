@@ -40,7 +40,7 @@ export default function useParallax() {
     }
 
     function loop() {
-      const withinRange = heroScrollCurrent < window.innerHeight + 400;
+      const withinRange = heroScrollTarget < window.innerHeight + 400;
       if (heroEl && withinRange) {
         heroScrollCurrent = lerp(heroScrollCurrent, heroScrollTarget, 0.09);
         mouseCurrentX = lerp(mouseCurrentX, mouseTargetX, 0.07);

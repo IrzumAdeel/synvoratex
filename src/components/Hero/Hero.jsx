@@ -30,17 +30,17 @@ export default function Hero() {
   const ctaRef = useMagnetic();
 
   return (
-    <header id="home" ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-navy">
+    <header id="home" ref={heroRef} className="relative min-h-screen flex flex-col overflow-hidden bg-navy">
       <HeroBackground ref={bgRef} />
 
-      <div id="orb-1" ref={orb1Ref} className="absolute -top-20 -right-20 pointer-events-none">
+      <div id="orb-1" ref={orb1Ref} className="absolute -top-20 -right-20 pointer-events-none z-0">
         <div className="orb w-[420px] h-[420px] rounded-full bg-accent/25 blur-[110px]" />
       </div>
-      <div id="orb-2" ref={orb2Ref} className="absolute bottom-0 left-1/3 pointer-events-none">
+      <div id="orb-2" ref={orb2Ref} className="absolute bottom-0 left-1/3 pointer-events-none z-0">
         <div className="orb-slow w-[320px] h-[320px] rounded-full bg-blue-400/10 blur-[100px]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-28 pb-16 w-full grid lg:grid-cols-[1.15fr_.85fr] gap-14 items-center">
+      <div className="relative z-10 flex-1 max-w-7xl mx-auto px-6 lg:px-10 pt-28 pb-8 w-full grid lg:grid-cols-[1.15fr_.85fr] gap-14 items-center">
         <div ref={contentRef} className="max-w-2xl">
           <div className="hero-in inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-white/90 text-xs font-semibold tracking-wide mb-7 backdrop-blur-sm" style={{ animationDelay: '.05s' }}>
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
@@ -70,14 +70,14 @@ export default function Hero() {
         <FloatingCards ref={cardsRef} />
       </div>
 
-      <a href="#stats" className="scroll-cue hidden sm:flex absolute bottom-20 left-1/2 -translate-x-1/2 z-10 flex-col items-center gap-2 text-white/50 hover:text-white transition-colors" style={{ animationDelay: '1.1s' }} aria-label="Scroll down">
+      <a href="#stats" className="scroll-cue hidden sm:flex relative z-10 mx-auto mb-6 flex-col items-center gap-2 text-white/50 hover:text-white transition-colors" style={{ animationDelay: '1.1s' }} aria-label="Scroll down">
         <span className="text-[10px] font-semibold tracking-[0.2em]">SCROLL</span>
         <svg width="14" height="20" viewBox="0 0 14 20" fill="none" aria-hidden="true">
           <path d="M7 1v16M1 11l6 6 6-6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </a>
 
-      <div className="absolute bottom-0 left-0 right-0 z-10 bg-white/5 border-t border-white/10 backdrop-blur-sm overflow-hidden py-3">
+      <div className="relative z-10 shrink-0 bg-white/5 border-t border-white/10 backdrop-blur-sm overflow-hidden py-3">
         <div className="marquee-track flex whitespace-nowrap gap-10 text-white/50 text-xs font-semibold tracking-wide">
           <TickerGroup />
           <TickerGroup ariaHidden="true" />

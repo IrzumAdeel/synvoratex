@@ -5,16 +5,14 @@ const HeroBackground = forwardRef(function HeroBackground(_, bgRef) {
     <div id="hero-bg" ref={bgRef} className="absolute inset-0">
       <div className="hero-slide s1">
         <img
-          src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?auto=format&fit=crop&w=2000&q=80"
-          onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2000&q=80'; }}
+          src="/fabrics/pl.jpg"
           className="kenburns w-full h-full object-cover"
           alt="Fabric rolls ready for global export"
         />
       </div>
       <div className="hero-slide s2">
         <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=2000&q=80"
-          onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80'; }}
+          src="/fabrics/sourcing.jpg"
           className="kenburns-2 w-full h-full object-cover"
           alt="Textile manufacturing floor"
         />
