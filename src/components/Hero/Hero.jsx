@@ -15,8 +15,8 @@ const tickerItems = [
 function TickerGroup({ ariaHidden }) {
   return (
     <span className="flex gap-10" aria-hidden={ariaHidden}>
-      {tickerItems.map((item, i) => (
-        <span key={i} className="flex gap-10">
+      {tickerItems.map((item) => (
+        <span key={item} className="flex gap-10">
           <span>{item}</span>
           <span className="text-accent">•</span>
         </span>

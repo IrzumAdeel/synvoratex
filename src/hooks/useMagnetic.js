@@ -25,6 +25,8 @@ export default function useMagnetic() {
         const mag = Math.sqrt(dx * dx + dy * dy);
         if (mag > maxPull) { const s = maxPull / mag; dx *= s; dy *= s; }
         btn.style.transform = `translate(${dx}px, ${dy}px)`;
+      } else {
+        btn.style.transform = 'translate(0,0)';
       }
     }
     function onMouseLeave() { btn.style.transform = 'translate(0,0)'; }

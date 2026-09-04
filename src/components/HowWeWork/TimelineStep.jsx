@@ -1,12 +1,14 @@
+import { useMemo } from 'react';
 import useScrollReveal from '../../hooks/useScrollReveal';
 import mergeRefs from '../../utils/mergeRefs';
 
 export default function TimelineStep({ step, status, delay, positionRef }) {
   const [revealRef, isIn] = useScrollReveal();
+  const setRef = useMemo(() => mergeRefs(revealRef, positionRef), [revealRef, positionRef]);
 
   return (
     <div
-      ref={mergeRefs(revealRef, positionRef)}
+      ref={setRef}
       className={`reveal ${isIn ? 'in' : ''} tl-step ${status} relative pl-16`}
       style={{ transitionDelay: delay }}
     >

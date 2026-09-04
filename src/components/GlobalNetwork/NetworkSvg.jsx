@@ -44,8 +44,8 @@ export default function NetworkSvg() {
       </g>
 
       <g fill="#94a3b8" fontFamily="Poppins" fontSize="11">
-        {destinations.map((d, i) => (
-          <g key={i}>
+        {destinations.map((d) => (
+          <g key={`${d.cx}-${d.cy}`}>
             <circle cx={d.cx} cy={d.cy} r="4" fill="#60a5fa" />
             <text x={d.cx} y={d.labelY} textAnchor="middle" fill="#e2e8f0">{d.label}</text>
           </g>

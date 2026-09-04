@@ -7,7 +7,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const initialForm = {
   name: '',
   email: '',
-  countryCode: '+92',
+  countryCode: 'PK',
   phone: '',
   query: '',
 };
@@ -124,7 +124,7 @@ export default function ContactForm() {
               onChange={(e) => update('countryCode', e.target.value)}
             >
               {countryCodes.map((c) => (
-                <option key={c.iso} value={c.dial}>
+                <option key={c.iso} value={c.iso}>
                   {c.iso} {c.dial}
                 </option>
               ))}

@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import useScrollReveal from '../../hooks/useScrollReveal';
 import useSpotlight from '../../hooks/useSpotlight';
 import mergeRefs from '../../utils/mergeRefs';
@@ -6,10 +7,11 @@ import Icon from '../icons/Icon';
 export default function ServiceCard({ icon, title, desc, delay }) {
   const [revealRef, isIn] = useScrollReveal();
   const spotRef = useSpotlight();
+  const setRef = useMemo(() => mergeRefs(revealRef, spotRef), [revealRef, spotRef]);
 
   return (
     <div
-      ref={mergeRefs(revealRef, spotRef)}
+      ref={setRef}
       className={`reveal ${isIn ? 'in' : ''} card-lift spot-card bg-white rounded-2xl border border-line p-8`}
       style={{ transitionDelay: delay }}
     >
